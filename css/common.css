@@ -1,0 +1,122 @@
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    color: #333;
+}
+h3 {
+    font-size: 50px;
+    font-weight: bold;
+}
+.inner {
+    max-width: 1600px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+
+.mobile {display: none;}
+
+/* header */
+header {
+    height: 100px;
+    background-color: #fff;
+}
+header .inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .inner h1 {
+    height: 50px;
+}
+header .inner h1 img {
+    height: 50px;
+}
+header .inner .pc .gnb .depth01 {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+header .inner .pc .gnb .depth01 > a {
+    display: block;
+    line-height: 100px;
+    padding: 0 30px;
+}
+header .inner .pc .gnb .depth01 .depth02 {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: #fff;
+    text-align: center;
+    display: none;
+}
+header .inner .pc .gnb .depth01 .depth02 li {
+    padding: 15px;
+}
+
+/* mobile_gnb */
+.menu_open {
+    cursor: pointer;
+}
+.mobile_gnb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    padding: 100px 15px;
+    background-color: #fff;
+}
+.mobile_gnb .menu_close {
+    position: absolute;
+    top: 40px;
+    right: 18px;
+    color: #BB181D;
+    cursor: pointer;
+}
+.mobile_gnb .gnb {
+    text-align: center;
+}
+.mobile_gnb .gnb .depth01 {
+    margin-bottom: 30px;
+}
+.mobile_gnb .gnb .depth01 > a {
+    font-size: 32px;
+    font-weight: bold;
+}
+.mobile_gnb .gnb .depth01 .depth02 {
+    display: none;
+}
+.mobile_gnb .gnb .depth01 .depth02 li {
+    font-size: 16px;
+    margin: 15px 0;
+}
+.mobile_gnb .gnb .depth01 .depth02 li:hover {
+    color: #BB181D;
+}
+
+/* footer */
+footer {
+    padding: 20px 0;
+    background-color: #BB181D;
+    color: #fff;
+    text-align: center;
+}
+
+@media screen and (max-width:1024px) {
+    .pc {display: none;}
+    .mobile {display: block;}
+    .mobile_gnb {display: block;}
+}
+@media screen and (max-width:767px) {
+    header .inner h1 {
+        height: 25px;
+    }
+    header .inner h1 img {
+        height: 100%;
+    }
+}
